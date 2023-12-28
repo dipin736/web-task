@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web development</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="font">
+            <button class="btn" onclick="undo()">Undo</button>
+            <button class="btn" onclick="redo()">Redo</button>
+
+            <label for="input-font">Font Style:</label>
+            <select id="input-font" class="input">
+                <option value="Times-new-roman" selected="selected">Times New Roman</option>
+                <option value="Arial">Arial</option>
+                <option value="Algerian">Algerian</option>
+                <option value="Berlin-sans-fb">Berlin Sans FB</option>
+                <option value="monospace">monospace</option>
+            </select>
+
+            <label for="input-font-size">Font Size:</label>
+            <input type="number" id="input-font-size" value="16" min="8" max="72" />
+
+            <label for="input-font-color">Font color:</label>
+            <input type="color" id="textColor" value="#000000" />
+
+            <button class="btn" onclick="applyChanges()">Apply</button>
+        </div>
+        <div id="output-text" draggable="true" ondragstart="dragStart(event)">
+            Welcome to the world of web development!
+        </div>
+    </div>
+</body>
+</html>
